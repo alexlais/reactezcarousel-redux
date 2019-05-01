@@ -1,0 +1,28 @@
+
+/* --- BASE RULES --- */
+body {
+  margin: 5Vw 0 0 0;
+  font-family: sans-serif;
+}
+h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 0 0 .5em;
+  font-weight: normal;
+}
+h3 {
+  font-size: 1.4em;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+img.responsive {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+a {
+  color: #0066ff;
+}

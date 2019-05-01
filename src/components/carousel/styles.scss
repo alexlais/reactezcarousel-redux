@@ -1,0 +1,83 @@
+
+@import "../../variables.scss";
+
+/* --- CAROUSEL --- */
+.carousel {
+  overflow: hidden;
+  position: relative;
+  padding: 0 $side-padding;
+  > div {
+    transition: margin .5s ease-in-out;    
+    
+    &.length1 {
+        width: auto;
+    }
+    &.length2 {
+        width: -webkit-calc(200% + (4 * #{$side-padding}));
+        width:    -moz-calc(200% + (4 * #{$side-padding}));
+        width:         calc(200% + (4 * #{$side-padding}));
+    }
+    &.length3 {
+        width: -webkit-calc(300% + (6 * #{$side-padding}));
+        width:    -moz-calc(300% + (6 * #{$side-padding}));
+        width:         calc(300% + (6 * #{$side-padding}));
+    }
+    &.length4 {
+        width: -webkit-calc(400% + (8 * #{$side-padding}));
+        width:    -moz-calc(400% + (8 * #{$side-padding}));
+        width:         calc(400% + (8 * #{$side-padding}));
+    }
+    &.length5 {
+        width: -webkit-calc(500% + (10 * #{$side-padding}));
+        width:    -moz-calc(500% + (10 * #{$side-padding}));
+        width:         calc(500% + (10 * #{$side-padding}));
+    }
+    > div {
+      width: 100%;
+      padding: 0 $side-padding;
+    }
+  }
+
+  &.active1 > div {
+      margin-left: -$side-padding;
+  }
+  &.active2 > div {
+      margin-left: calc(-100% - (3 * #{$side-padding}));
+  }
+  &.active3 > div {
+      margin-left: calc(-200% - (5 * #{$side-padding}));
+  }
+  &.active4 > div {
+      margin-left: calc(-300% - (7 * #{$side-padding}));
+  }
+  &.active5 > div {
+      margin-left: calc(-400% - (9 * #{$side-padding}));
+  }
+  figure {
+      margin: 0;
+      position: relative;
+  }
+  .pagination {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0;
+    line-height: 0;
+    list-style-type: none;
+    li {
+      display: inline-block;
+      background: Gray;
+      width: 20px;
+      height: 20px;
+      margin: 0 20px;
+      border-radius: 50%;
+      text-indent: -9999px;
+      cursor: pointer;
+    }
+  }
+  &.active1 li.active1, &.active2 li.active2, &.active3 li.active3, &.active4 li.active4, &.active5 li.active5 {
+      padding: 5px;
+      margin: 0 15px;
+  }
+}
+
+
